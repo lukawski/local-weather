@@ -1,0 +1,10 @@
+html {
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+body {
+    background: black;
+}
+.header {
+    text-align: center;
+}
