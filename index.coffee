@@ -1,4 +1,6 @@
 $ ->
     $.getJSON 'http://ipinfo.io', (data) ->
-        console.log(data)
+        coordinates = data.loc.split ","
+        console.log coordinates
+        
 
