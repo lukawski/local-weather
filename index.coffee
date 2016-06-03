@@ -19,3 +19,8 @@ $ ->
                     $(this).attr 'data-degree', 'c'
                     $(this).html '&#8451;'
                     $('#temp').text tempC
+    $(document).ajaxStop ->
+        setTimeout ->
+            $('#loaderStatus').removeClass 'active'
+            $('.loader').animate {backgroundColor: 'transparent'}, 2000
+        , 5000
