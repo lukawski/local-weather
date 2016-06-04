@@ -1,4 +1,7 @@
 $ ->
+    tempC = 0
+    tempK = 0
+    tempF = 0
     $.getJSON 'http://ipinfo.io', (data) ->
         $.getJSON "https://restcountries.eu/rest/v1/alpha/#{data.country}", (data) ->
             $('#country').text data.name
@@ -9,7 +12,12 @@ $ ->
             tempC = Math.round tempK - 273.15
             tempF = Math.round tempK * 9/5 - 459.67
             $("#temp").text tempC
+    $(document).ajaxStop ->
+        setTimeout ->
+            $('#loaderStatus').removeClass 'active'
+            $('.loader').animate {backgroundColor: 'transparent'}, 2000
             $("#degree").click ->
+                alert tempC
                 currentD = $(this).attr 'data-degree'
                 if currentD == 'c'
                     $(this).attr 'data-degree', 'f'
@@ -19,8 +27,4 @@ $ ->
                     $(this).attr 'data-degree', 'c'
                     $(this).html '&#8451;'
                     $('#temp').text tempC
-    $(document).ajaxStop ->
-        setTimeout ->
-            $('#loaderStatus').removeClass 'active'
-            $('.loader').animate {backgroundColor: 'transparent'}, 2000
         , 5000
