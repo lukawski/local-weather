@@ -16,6 +16,9 @@ $ ->
         setTimeout ->
             $('#loaderStatus').removeClass 'active'
             $('.loader').animate {backgroundColor: 'transparent'}, 2000
+            setTimeout ->
+                $('.loader').css 'display', 'none'
+            , 6000
             $("#degree").click ->
                 alert tempC
                 currentD = $(this).attr 'data-degree'
