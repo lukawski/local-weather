@@ -13,14 +13,15 @@ $ ->
             tempF = Math.round tempK * 9/5 - 459.67
             $("#temp").text tempC
     $(document).ajaxStop ->
+        if tempC > 20
+            $('body').css 'background', 'url(https://source.unsplash.com/WLUHO9A_xik/1920x1080) no-repeat center'
         setTimeout ->
             $('#loaderStatus').removeClass 'active'
             $('.loader').animate {backgroundColor: 'transparent'}, 2000
             setTimeout ->
                 $('.loader').css 'display', 'none'
-            , 6000
+            , 2050
             $("#degree").click ->
-                alert tempC
                 currentD = $(this).attr 'data-degree'
                 if currentD == 'c'
                     $(this).attr 'data-degree', 'f'

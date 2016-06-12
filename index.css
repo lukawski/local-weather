@@ -1,9 +1,10 @@
 html {
     color: white;
     font-family: 'Lato', sans-serif;
+    text-shadow: -2px -1px 3px rgba(150, 150, 150, 0.69);
 }
 body {
-    background: black;
+    background: url(https://unsplash.com/photos/O1k66MQZvsU/1920x1080) no-repeat center;
 }
 .header {
     text-align: center;
@@ -15,6 +16,7 @@ body {
     height: 100%;
     width: 100%;
     background-color: black;
+    margin: 0;
 }
 .preloader-wrapper {
     position: absolute;
