@@ -1,26 +1,12 @@
 html {
-    color: white;
+    color: #333;
     font-family: 'Lato', sans-serif;
     text-shadow: -2px -1px 3px rgba(150, 150, 150, 0.69);
+    font-size: 40px;
 }
-.header {
+
+.main {
+    margin: 0 auto;
+    width: 50%;
     text-align: center;
-}
-.loader {
-    text-align: center;
-    z-index: 1;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    margin: 0;
-}
-.preloader-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-#degree {
-    cursor: pointer;
 }

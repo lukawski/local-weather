@@ -1,0 +1,22 @@
+{
+  "name": "local-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukawski/local-weather.git"
+  },
+  "author": "Kacper Łukawski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukawski/local-weather/issues"
+  },
+  "homepage": "https://github.com/lukawski/local-weather#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.2"
+  }
+}
